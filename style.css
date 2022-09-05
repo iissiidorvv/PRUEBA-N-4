@@ -2,59 +2,146 @@
   margin: 0%;
   padding: 0%;
 }
-
-header{
-background-color: #0c0c0cfb;
-
+body {
+  font-family: sans-serif;
 }
 
-header .logo{
-margin: 0;
-padding: 25px 30px;
-font-weight: bold;
-color: #f8f8f8;
-font-size: 1.6em;
+.header {
+  background-color: #202020;
+  height: 80px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
 }
 
-header .container{
-display: flex;
-flex-direction: column;
-align-items: center;
+.nav {
+  display: flex;
+  justify-content: space-around;
+  max-width: 992px;
+  margin: 0 auto;
 }
 
-header nav{
-display: flex;
-flex-direction: column;
-text-align: left;
-padding-bottom: 25px;
+.nav-link {
+  color: white;
+  text-decoration: none;
+}
+.imagenL {
+    width: 257px;  
 }
 
-header a{
-padding: 5px 12px;
-text-decoration: none;
-font-weight: bold;
-color: #ffffff;
-text-align: left;
+.logo {
+  font-size: 30px;
+  font-weight: bold;
+  padding: 0 40px;
+  line-height: 80px;
 }
 
-header a:hover{
-color: blueviolet;
+.nav-menu {
+  display: flex;
+  margin-right: 40px;
+  list-style: none;
 }
 
-header{
-position: fixed;
-width: 100%;
+.nav-menu-item {
+  font-size: 18px;
+  margin: 0 10px;
+  line-height: 80px;
+  text-transform: uppercase;
+  width: max-content;
 }
 
-header .container{
-flex-direction: row;
-justify-content: space-between;
+.nav-menu-link {
+  padding: 8px 12px;
+  border-radius: 3px;
 }
 
-header nav{
-flex-direction: row;
-padding-bottom: 0;
-padding-right: 20px;
+.nav-menu-link:hover,
+.nav-menu-link_active {
+  background-color: #034574;
+  transition: 0.5s;
+}
+
+/* TOGGLE */
+.nav-toggle {
+  color: white;
+  background: none;
+  border: none;
+  font-size: 30px;
+  padding: 0 20px;
+  line-height: 60px;
+  cursor: pointer;
+  display: none;
+}
+.box{
+    position: absolute;
+}
+input.src{
+    padding: 9px 10px 9px 32px;
+    outline: none;
+    font-size: 18px;
+    border-radius: 15px;
+    color: #444;
+    border: 3x solid #a50559;
+    background: #2C3333 url("img/busqueda.png")
+        no-repeat 9px center;
+    width: 200px;
+    transform: all 5s;
+}
+input.src:hover{
+    width: 180px;
+    background-color: #2C3333;
+    border-color: #2C3333;
+}
+  
+/* MOBILE */
+@media (max-width: 768px) {
+  body {
+    padding-top: 70px;
+  }
+
+  .header {
+    height: 60px;
+  }
+
+  .nav-menu {
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    background-color: #2c3e50;
+    position: fixed;
+    top: 60px;
+    width: 100%;
+    padding: 20px 0;
+
+    height: calc(100% - 60px);
+    overflow-y: auto;
+
+    left: 100%;
+    transition: left 0.3s;
+  }
+
+  .nav-menu-item {
+    line-height: 70px;
+  }
+
+  .nav-menu-link:hover,
+  .nav-menu-link_active {
+    background: none;
+    color: #83c5f7;
+  }
+
+  .nav-toggle {
+    display: block;
+  }
+
+  .nav-menu_visible {
+    left: 0;
+  }
+
+  .nav-toggle:focus:not(:focus-visible) {
+    outline: none;
+  }
 }
 .imagen1 {
  display: flex;
@@ -110,9 +197,9 @@ padding-right: 20px;
   margin-top: 0%;
 }
 .subtitulo {
-  border: white 50px solid;
+  border: white 30px solid;
 }
-.subtitulo .subf1 {
+.subtitulo .sub {
   text-align: center;
   color: #000;
   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -126,7 +213,7 @@ padding-right: 20px;
 }
 .subf {
   text-align: left;
-  width: 1000px;
+  width: 900px;
   height: 500px;
   padding: 30px;
   margin: auto;
@@ -134,36 +221,23 @@ padding-right: 20px;
   border-radius: 4px;
   background-image:
            url(img/riotgamescom-forge.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  font-family: 'Century Gothic', sans-serif;
-  display: flex;
-  align-content: flex-end;
-  flex-wrap: wrap;
-}
-
  
-.sub {
+}
+.subx {
   background-color: red;
   color: #f8f8f8;
   font-weight: bold;
   font-size: 100%;
+  padding: 9px 10px 9px 32px;
+  width: 30%;
 }
-
-.sub-2 {
-  color: #f8f8f8;
-  font-weight: bold;
+.wa-2{
+  color: white;
 }
-
-.suba-2 {
-  color: #f8f8f8;
-  font-weight: bold;
-  margin-top: 0%;
-
+.subx2{
+  color: white;
 }
-
-
-.botoncito {
+.boton-1 {
   border-radius: 30px;
   margin: 20px;
   height: 35px;
@@ -172,29 +246,32 @@ padding-right: 20px;
   color:white;
   border: red;
   font-weight: bold;
+  text-align: center;
   margin-left: 45%;
+
 }
- 
-.finalcito {
-  align-items: center;
+.finalizima {
+  align-items: flex-start;
   text-align: center;
 }
   footer nav {
       flex-direction: row;
       padding-bottom: 0;
-      align-items: center;
+      align-items:center;
       text-align: baseline;
 }
 
 
 footer .container-2 {
-  height: 120px;
+  height: 40px;
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: left;
   flex-direction: row;
 }
-
+.container a img{
+  width: 30px;
+}
 
 
 footer {
@@ -204,7 +281,7 @@ footer {
 
 footer .container{
   display: flex;
-  height: 120px;
+  height: 100px;
   display: flex;
   justify-content: center;
   align-items: left;
@@ -213,7 +290,7 @@ footer .container{
 
 footer nav{
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   text-align: left;
   padding-bottom: 25px;
 }
@@ -236,7 +313,26 @@ footer .container-2 a{
 }
 
 footer a:hover{
-  color: rgb(255, 115, 115);
+  color: rgb(255, 0, 0);
 }
 
+.redes a img {
+  width: 10px;
+}
+
+.container a {
+  font-size: 20%;
+}
+.container-2 nav{
+  justify-content: flex-start;
+}
+.container-2 a{
+  font-size: 20%;
+}
+.container-2 a img{
+  width: 10px;
+}
+.container-2 p{
+  color: #ffffff;
+}
 
