@@ -27,7 +27,7 @@ body {
   text-decoration: none;
 }
 .imagenL {
-    width: 257px;  
+    width: 230px;  
 }
 
 .logo {
@@ -83,7 +83,7 @@ input.src{
     border-radius: 15px;
     color: #444;
     border: 3x solid #a50559;
-    background: #2C3333 url("img/busqueda.png")
+    background: #2C3333 url("img/icons/lupa.png")
         no-repeat 9px center;
     width: 200px;
     transform: all 5s;
